@@ -8,23 +8,14 @@ const subtract = function(num1, num2) {
 	
 };
 
-const sum = function(nums) {
-  let sum = 0;
-  for(const num of nums){
-    sum = add(sum,num);
-  }
-  return sum;
-};
+const sum = function (array){
+  return array.reduce( (acc,num) => acc+num,0);
+}
 
-const multiply = function(nums) {
-  if (nums.length == 0) return 0;
-  let res = 1;
-  for(const num of nums){
-    res *= num;
-  }
-  return res;
-
-};
+const multiply = function(array){
+  if (array.length == 0) return 0;
+  return array.reduce ((acc,num) => acc*num,1)
+}
 
 const power = function(num1,num2) {
   return Math.pow(num1,num2);
